@@ -4,6 +4,8 @@ const allEmployees = await getCollection("employees");
 
 import Container from "./Container.astro";
 import Subtitle from "./Subtitle.astro";
+
+const IMG_CLASSES = "h-[102.82px] w-[102.82px] rounded-3xl filter grayscale hover:grayscale-0";
 ---
 
 <Container>
@@ -25,13 +27,13 @@ import Subtitle from "./Subtitle.astro";
                   <img
                     src={profile.src}
                     alt={name}
-                    class="h-[102.82px] w-[102.82px] rounded-3xl filter grayscale hover:grayscale-0 hue-rotate-0"
+                    class={IMG_CLASSES}
                   />
                 </div>
                 <div class="w-full justify-between items-center inline-flex relative">
                   <div class="grow shrink basis-0 justify-start items-center gap-8 flex">
                     <div class="h-[102.82px] left-0 top-0 relative lg:hidden xl:block">
-                      <img src={profile.src} alt={name} />
+                      <img src={profile.src} alt={name} class={IMG_CLASSES} />
                     </div>
                     <div class="flex-col justify-end items-start inline-flex">
                       <div class="text-lg font-normal">{title}</div>
