@@ -14,7 +14,7 @@ export const collections = {
   }),
   services: defineCollection({
     type: "content",
-    schema: ({ image }) =>
+    schema: () =>
       z.object({
         id: z.number(),
         name1: z.string(),
