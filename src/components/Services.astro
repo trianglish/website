@@ -33,13 +33,14 @@ import Subtitle from "./Subtitle.astro";
                   <img
                     class="w-[41px] h-[41px] left-0 top-0 absolute"
                     src={arrow}
+                    alt="arrow"
                   />
                 </div>
                 <div class="text-xl font-normal leading-7">Learn more</div>
               </a>
             </div>
             <div class="w-[210px] h-[170px] pt-0.5 pb-[1.95px] justify-center items-center flex">
-              <img class="hidden md:block" src={image} />
+              <img class="hidden md:block" src={image} alt={`${name1} ${name2}`} />
             </div>
           </div>
         ))
