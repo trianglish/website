@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 const allEmployees = await getCollection("employees");
 
@@ -25,12 +26,12 @@ const IMG_CLASSES =
             <div class="px-[35px] py-10 bg-white rounded-[45px] shadow border border-zinc-900 flex-col justify-start items-start gap-2.5 inline-flex text-black w-full">
               <div class="flex-col justify-start items-start gap-7 flex w-full overflow-ellipsis overflow-hidden">
                 <div class="left-0 top-0 relative sm:hidden md:hidden lg:block xl:hidden">
-                  <img src={profile.src} alt={name} class={IMG_CLASSES} />
+                  <Image src={profile} alt={name} class={IMG_CLASSES} />
                 </div>
                 <div class="w-full justify-between items-center inline-flex relative">
                   <div class="grow shrink basis-0 justify-start items-center gap-8 flex">
                     <div class="h-[102.82px] left-0 top-0 relative lg:hidden xl:block">
-                      <img src={profile.src} alt={name} class={IMG_CLASSES} />
+                      <Image src={profile} alt={name} class={IMG_CLASSES} />
                     </div>
                     <div class="flex-col justify-end items-start inline-flex">
                       <div class="text-lg font-normal">{title}</div>
