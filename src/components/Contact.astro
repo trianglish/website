@@ -19,7 +19,7 @@ import Subtitle from "./Subtitle.astro";
             <input
               id="inline-radio"
               type="radio"
-              value=""
+              value="hi"
               name="inline-radio-group"
               class="w-4 h-4 text-lime bg-black border-black focus:ring-lime"
             />
@@ -32,7 +32,7 @@ import Subtitle from "./Subtitle.astro";
             <input
               id="inline-2-radio"
               type="radio"
-              value=""
+              value="quote"
               name="inline-radio-group"
               class="w-4 h-4 text-lime bg-black border-black focus:ring-lime"
             />
@@ -48,6 +48,7 @@ import Subtitle from "./Subtitle.astro";
             class="block mb-2 text-base font-medium text-black">Name</label
           >
           <input
+            name="name"
             type="text"
             id="subject"
             class="shadow-sm bg-white border text-black text-base rounded-lg focus:ring-black focus:border-black block w-full p-2.5"
@@ -60,6 +61,7 @@ import Subtitle from "./Subtitle.astro";
             >Email</label
           >
           <input
+            name="email"
             type="email"
             id="email"
             class="block p-3 w-full text-base text-black bg-white rounded-lg border shadow-sm focus:ring-black focus:border-black"
@@ -74,6 +76,7 @@ import Subtitle from "./Subtitle.astro";
             >Message</label
           >
           <textarea
+            name="message"
             id="message"
             rows="6"
             class="block p-2.5 w-full text-base text-black bg-white rounded-lg shadow-sm border focus:ring-black focus:border-black"
