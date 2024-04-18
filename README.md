@@ -1,5 +1,6 @@
 # Trianglish Website
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d0e2b018-c64c-42f8-b625-b5f98692cfb7/deploy-status)](https://app.netlify.com/sites/trianglish-website/deploys)
 [![Static Badge](https://img.shields.io/badge/Astro-orange)](https://astro.build/)
 
 ## 🚀 Project Structure
