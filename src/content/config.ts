@@ -22,6 +22,7 @@ export const collections = {
         description: z.string(),
         profile: image(),
         link: z.string(),
+        order: z.number(),
       }),
   }),
   services: defineCollection({

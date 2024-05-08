@@ -3,5 +3,6 @@
   "name": "Mark Sandwich",
   "description": "Mark breathes life into pixels, creating jaw-dropping visuals that make your brand pop off the screen and dance around the competition.",
   "profile": "./mark.png",
-  "link": "/"
+  "link": "/",
+  "order": 3
 }
