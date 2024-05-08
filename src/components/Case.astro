@@ -1,6 +1,9 @@
 ---
+import { Image } from "astro:assets";
+
 import Container from "./Container.astro";
 import Subtitle from "./Subtitle.astro";
+import imgServicesAGC from "../../public/services/agc.svg";
 ---
 
 <Container>
@@ -25,7 +28,7 @@ import Subtitle from "./Subtitle.astro";
         </div>
         <div class="justify-start items-center gap-[15px] inline-flex">
           <div class="text-lime text-xl font-normal leading-7">Learn more</div>
-          <img src="/services/agc.svg" alt="arrow" />
+          <Image src={imgServicesAGC} alt="arrow" />
         </div>
       </div>
       <div
@@ -38,7 +41,7 @@ import Subtitle from "./Subtitle.astro";
         </div>
         <div class="justify-start items-center gap-[15px] inline-flex">
           <div class="text-lime text-xl font-normal leading-7">Learn more</div>
-          <img src="/services/agc.svg" alt="arrow" />
+          <Image src={imgServicesAGC} alt="arrow" />
         </div>
       </div>
       <div
@@ -51,7 +54,7 @@ import Subtitle from "./Subtitle.astro";
         </div>
         <div class="justify-start items-center gap-[15px] inline-flex">
           <div class="text-lime text-xl font-normal leading-7">Learn more</div>
-          <img src="/services/agc.svg" alt="arrow" />
+          <Image src={imgServicesAGC} alt="arrow" />
         </div>
       </div>
     </div>

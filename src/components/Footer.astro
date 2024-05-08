@@ -1,23 +1,28 @@
 ---
+import { Image } from "astro:assets";
+
 import Container from "./Container.astro";
+import imgLogo from "../../public/Logo.svg";
+
+const currentYear = new Date().getFullYear();
 ---
 
-<footer class="bg-lime bg-fixed bg-bottom text-black">
+<footer class="bg-lime bg-fixed bg-bottom text-black sticky top-[100vh]">
   <Container>
     <div class="py-6">
       <div class="flex flex-col items-center justify-between md:flex-row">
         <div class="flex items-center space-x-3 rtl:space-x-reverse">
           <div class="bg-white rounded-full p-2">
-            <img class="h-8" src="/Logo.svg" alt="Logo" />
+            <Image class="h-8 w-8" src={imgLogo} alt="Logo" />
           </div>
         </div>
         <div class="flex mt-4 md:m-0">
           <div class="-mx-4">
-            @ <span id="currentYear"></span> Trianglish | Made with <a
-              href="https://astro.build/"
+            @ <span>{currentYear}</span> Trianglish x <a
+              href="https://rbi.nz"
               target="_blank"
               rel="noopener noreferrer"
-              class="underline">Astro</a
+              class="underline">rbi.nz</a
             >
           </div>
         </div>
@@ -25,8 +30,3 @@ import Container from "./Container.astro";
     </div>
   </Container>
 </footer>
-
-<script is:inline>
-  const year = new Date().getFullYear();
-  document.getElementById("currentYear").innerHTML = `${year}`;
-</script>

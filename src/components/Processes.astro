@@ -1,7 +1,11 @@
 ---
+import { Image } from "astro:assets";
+
 import Container from "./Container.astro";
 import teamData from "./Data/team.json";
 import Subtitle from "./Subtitle.astro";
+
+import imgPlusIcon from "../../public/team/plus.svg";
 ---
 
 <Container>
@@ -31,10 +35,10 @@ import Subtitle from "./Subtitle.astro";
                 <h3 class="text-lg md:text-3xl font-medium">{title}</h3>
               </div>
               <div>
-                <img
+                <Image
                   data-accordion-icon
-                  src="/team/plus.svg"
-                  alt=""
+                  src={imgPlusIcon}
+                  alt="plus icon"
                   class="justify-items-end w-10 h-10"
                   aria-hidden="true"
                 />

@@ -1,5 +1,8 @@
 ---
+import { Image } from "astro:assets";
+
 import Container from "./Container.astro";
+import imgHero from "../../public/Hero.svg";
 ---
 
 <Container>
@@ -22,7 +25,7 @@ import Container from "./Container.astro";
           class="px-9 py-5 bg-zinc-900 hover:bg-white text-white hover:text-black border rounded-2xl justify-items-center md:justify-items-start gap-2.5 inline-flex"
           rel="noopener noreferrer"
           href="/#contact-us"
-          target="_blank"
+          target="_self"
         >
           <h2 class="text-center text-xl font-normal leading-7">
             Start Growth Hacking
@@ -31,7 +34,7 @@ import Container from "./Container.astro";
       </div>
     </div>
     <div class="flex items-center py-5 md:w-6/12 md:pb-20 md:pt-10">
-      <img src="/Hero.svg" width="100%" alt="Hero" />
+      <Image src={imgHero} alt="Hero" class="w-full" loading={"eager"} />
     </div>
   </div>
 </Container>
