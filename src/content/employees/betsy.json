@@ -1,7 +1,8 @@
 {
-  "title": "Founder and Marketing Ops",
+  "title": "Founder, Marketing Ops",
   "name": "Betsy Ng",
   "description": " Steering the Trianglish ship with over a decade of marketing mastery, Betsy crafts killer ad creatives and PPC campaigns that turn clicks into customers.",
   "profile": "./betsy.png",
-  "link": "/"
+  "link": "/",
+  "order": 1
 }
