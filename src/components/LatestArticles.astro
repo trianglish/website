@@ -1,0 +1,70 @@
+---
+import { getCollection, getEntry } from "astro:content";
+import ArticlePreviewCard, {
+  type Props as ArticleProps,
+} from "./ArticlePreviewCard.astro";
+
+const author = await getEntry("employees", "betsy");
+const posts = await getCollection("articles");
+
+const latestArticles: ArticleProps[] = posts
+  .sort(
+    (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
+  )
+  .map(
+    (post): ArticleProps => ({
+      title: post.data.title,
+      description: post.data.description,
+      date: post.data.date,
+      url: `/articles/${post.slug}`,
+      author: {
+        name: author.data.name,
+        avatar: author.data.profile,
+      },
+      tag: "article",
+    }),
+  );
+---
+
+<section class="bg-white dark:bg-gray-900">
+  <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+    <div class="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
+      <h2
+        class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900"
+      >
+        Our Blog
+      </h2>
+      <p class="font-light text-gray-500 sm:text-xl">
+        A collection of articles, tutorials, and updates from our team.
+      </p>
+    </div>
+    <div class="grid gap-8">
+      <!-- Most recent two articles -->
+      <div class="grid gap-8 lg:grid-cols-2">
+        {
+          latestArticles.length ? (
+            latestArticles
+              .slice(0, 2)
+              .map(article => <ArticlePreviewCard {...article} />)
+          ) : (
+            <div class="prose col-span-4 rounded-xl bg-gray-100 p-4 text-center text-gray-400 shadow-sm dark:bg-gray-800">
+              <p>
+                I'm currently updating several older articles, check back soon.
+              </p>
+            </div>
+          )
+        }
+      </div>
+      <!-- Articles 3-6 -->
+      {
+        latestArticles.slice(2, 6).length ? (
+          <div class="grid gap-8 lg:grid-cols-4">
+            {latestArticles.slice(2, 6).map(article => (
+              <ArticlePreviewCard {...article} />
+            ))}
+          </div>
+        ) : null
+      }
+    </div>
+  </div>
+</section>
