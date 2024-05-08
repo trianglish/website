@@ -6,7 +6,7 @@ const faviconPngSizes = [192, 512];
 
 export const GET: APIRoute = async () => {
   const icons = await Promise.all(
-    faviconPngSizes.map(async (size) => {
+    faviconPngSizes.map(async size => {
       const image = await getImage({
         src: favicon,
         width: size,
@@ -23,11 +23,14 @@ export const GET: APIRoute = async () => {
 
   const manifest = {
     name: "Trianglish",
-    description: "Your site description",
+    short_name: "Trianglish",
+    description: "The organic growth social media experts for your business.",
     start_url: "/",
     display: "standalone",
     id: "trianglish-com",
     icons,
+    background_color: "#000000",
+    theme_color: "#B9FF66",
   };
 
   return new Response(JSON.stringify(manifest));
