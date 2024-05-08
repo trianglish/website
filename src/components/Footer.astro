@@ -1,5 +1,9 @@
 ---
+import { Image } from "astro:assets";
+
 import Container from "./Container.astro";
+import imgLogo from "../../public/Logo.svg";
+
 const currentYear = new Date().getFullYear();
 ---
 
@@ -9,7 +13,7 @@ const currentYear = new Date().getFullYear();
       <div class="flex flex-col items-center justify-between md:flex-row">
         <div class="flex items-center space-x-3 rtl:space-x-reverse">
           <div class="bg-white rounded-full p-2">
-            <img class="h-8" src="/Logo.svg" alt="Logo" />
+            <Image class="h-8 w-8" src={imgLogo} alt="Logo" />
           </div>
         </div>
         <div class="flex mt-4 md:m-0">
