@@ -1,5 +1,6 @@
 ---
 import Container from "./Container.astro";
+const currentYear = new Date().getFullYear();
 ---
 
 <footer class="bg-lime bg-fixed bg-bottom text-black sticky top-[100vh]">
@@ -13,11 +14,11 @@ import Container from "./Container.astro";
         </div>
         <div class="flex mt-4 md:m-0">
           <div class="-mx-4">
-            @ <span id="currentYear"></span> Trianglish | Made with <a
-              href="https://astro.build/"
+            @ <span>{currentYear}</span> Trianglish x <a
+              href="https://rbi.nz"
               target="_blank"
               rel="noopener noreferrer"
-              class="underline">Astro</a
+              class="underline">rbi.nz</a
             >
           </div>
         </div>
@@ -25,8 +26,3 @@ import Container from "./Container.astro";
     </div>
   </Container>
 </footer>
-
-<script is:inline>
-  const year = new Date().getFullYear();
-  document.getElementById("currentYear").innerHTML = `${year}`;
-</script>
