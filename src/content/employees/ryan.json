@@ -3,5 +3,6 @@
   "name": "Ryan Binns",
   "description": "Drawing on 15 years of technical leadership, Ryan fine-tunes the digital gears of our operations, turning data into actionable insights without the usual SEO fuss.",
   "profile": "./ryan.png",
-  "link": "/"
+  "link": "/",
+  "order": 2
 }
