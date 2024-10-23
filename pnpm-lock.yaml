@@ -15,8 +15,8 @@ importers:
         specifier: ^5.1.2
         version: 5.1.2(astro@4.16.7(@types/node@20.17.0)(rollup@4.24.0)(typescript@5.6.3))(tailwindcss@3.4.14)
       '@binz/visor':
-        specifier: ^0.1.1
-        version: 0.1.1(rollup@4.24.0)(typescript@5.6.3)
+        specifier: ^0.2.1
+        version: 0.2.1(rollup@4.24.0)(typescript@5.6.3)
       astro:
         specifier: ^4.16.7
         version: 4.16.7(@types/node@20.17.0)(rollup@4.24.0)(typescript@5.6.3)
@@ -191,8 +191,8 @@ packages:
     resolution: {integrity: sha512-OwS2CM5KocvQ/k7dFJa8i5bNGJP0hXWfVCfDkqRFP1IreH1JDC7wG6eCYCi0+McbfT8OR/kNqsI0UU0xP9H6PQ==}
     engines: {node: '>=6.9.0'}
 
-  '@binz/visor@0.1.1':
-    resolution: {integrity: sha512-ZnG/+TaLQ3UFNRIqsAFpiwqPVKJigMZeU2Q8e95Ikx0dJLv+oXzKy4ybebM+Ky850KFVPtj5Y3xBtkCEcNX/rw==}
+  '@binz/visor@0.2.1':
+    resolution: {integrity: sha512-3UezFs5c0fkPLqcbaRk+AUKRvqpa7FSUKd3+NALR9dLbH+BTa1NE+7Ibmbpsqe50Jd7VTmeuOv9uEQvZCbIJaA==}
 
   '@canvas/image-data@1.0.0':
     resolution: {integrity: sha512-BxOqI5LgsIQP1odU5KMwV9yoijleOPzHL18/YvNqF9KFSGF2K/DLlYAbDQsWqd/1nbaFuSkYD/191dpMtNh4vw==}
@@ -2420,10 +2420,12 @@ snapshots:
       '@babel/helper-string-parser': 7.25.9
       '@babel/helper-validator-identifier': 7.25.9
 
-  '@binz/visor@0.1.1(rollup@4.24.0)(typescript@5.6.3)':
+  '@binz/visor@0.2.1(rollup@4.24.0)(typescript@5.6.3)':
     dependencies:
       '@types/node': 20.17.0
       astro: 4.16.7(@types/node@20.17.0)(rollup@4.24.0)(typescript@5.6.3)
+      sharp: 0.33.5
+      sharp-ico: 0.1.5
       web-vitals: 3.5.2
     transitivePeerDependencies:
       - less
