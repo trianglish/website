@@ -5,7 +5,7 @@
     "name2": "optimization",
     "background": "h-[310px] p-12 bg-zinc-100 rounded-[45px] shadow border border-black justify-between items-center flex text-black",
     "arrow": "./services/ag.svg",
-    "link": "./",
+    "link": "./#contact-us",
     "image": "./services/01.svg"
   },
   {
@@ -14,7 +14,7 @@
     "name2": "advertising",
     "background": "h-[310px] p-12 bg-lime rounded-[45px] shadow border border-black justify-between items-center flex text-black",
     "arrow": "./services/ag.svg",
-    "link": "./",
+    "link": "./#contact-us",
     "image": "./services/02.svg"
   },
   {
@@ -23,7 +23,7 @@
     "name2": "Marketing",
     "background": "h-[310px] p-12 bg-black rounded-[45px] shadow border border-black justify-between items-center flex text-white",
     "arrow": "./services/aw.svg",
-    "link": "./",
+    "link": "./#contact-us",
     "image": "./services/03.svg"
   },
   {
@@ -32,7 +32,7 @@
     "name2": "Marketing",
     "background": "h-[310px] p-12 bg-zinc-100 rounded-[45px] shadow border border-black justify-between items-center flex text-black",
     "arrow": "./services/ag.svg",
-    "link": "./",
+    "link": "./#contact-us",
     "image": "./services/04.svg"
   },
   {
@@ -41,7 +41,7 @@
     "name2": "Creation",
     "background": "h-[310px] p-12 bg-lime rounded-[45px] shadow border border-black justify-between items-center flex text-black",
     "arrow": "./services/ag.svg",
-    "link": "./",
+    "link": "./#contact-us",
     "image": "./services/05.svg"
   },
   {
@@ -50,7 +50,7 @@
     "name2": "Tracking",
     "background": "h-[310px] p-12 bg-black rounded-[45px] shadow border border-black justify-between items-center flex text-white",
     "arrow": "./services/aw.svg",
-    "link": "./",
+    "link": "./#contact-us",
     "image": "./services/06.svg"
   }
 ]
