@@ -18,8 +18,8 @@ const latestArticles: ArticleProps[] = posts
       date: post.data.date,
       url: `/articles/${post.slug}`,
       author: {
-        name: author.data.name,
-        avatar: author.data.profile,
+        name: author!.data.name,
+        avatar: author!.data.profile,
       },
       tag: "article",
     }),
