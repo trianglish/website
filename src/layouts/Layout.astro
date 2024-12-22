@@ -1,29 +1,50 @@
 ---
-import { getImage } from "astro:assets";
+// @ts-ignore
+import { Visor as Head, type Author } from "@binz/visor";
 import "../styles/global.css";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
-import faviconSvgSrc from "../../public/Logo.svg";
+import siteFaviconSvg from "../../public/Logo.svg";
 
-const faviconSvg = await getImage({ src: faviconSvgSrc, format: "svg" });
+const author: Author = {
+  name: "Trianglish",
+  twitterHandle: "@trianglish_",
+};
+
+const canonicalURL = Astro.url;
+const description =
+  "The organic growth social media experts for your business.";
+const defaultKeywords = ["Trianglish", "Social Media", "Organic Growth"];
+const keywords: string[] = [];
+const siteName = "Trianglish";
+const siteLocale = "en_GB";
+const siteTwitterHandle = "@trianglish_";
+const socialImagePath = "/Hero.svg";
+const socialImageAltText = "A loudhailer surrounded by social media icons.";
+const siteThemeColour = "#B9FF66";
+const title =
+  "Trianglish - The organic growth social media experts for your business | trianglish.com";
 ---
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="The organic growth social media experts for your business."
-    />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href={faviconSvg.src} />
-    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+  <Head
+    {author}
+    {canonicalURL}
+    {description}
+    {defaultKeywords}
+    {keywords}
+    {siteName}
+    {siteFaviconSvg}
+    {siteLocale}
+    {siteTwitterHandle}
+    {socialImagePath}
+    {socialImageAltText}
+    {siteThemeColour}
+    {title}
+    pwa
+  >
     <link rel="manifest" href="/manifest.json" />
-
-    <meta name="generator" content={Astro.generator} />
-    <title>Trianglish</title>
-
     <link
       rel="preload"
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
@@ -35,7 +56,7 @@ const faviconSvg = await getImage({ src: faviconSvgSrc, format: "svg" });
       rel="stylesheet"
       type="text/css"
     />
-  </head>
+  </Head>
 
   <body class="bg-white font-SpaceGrotesk space-y-20 flex h-screen flex-col">
     <Navbar />
